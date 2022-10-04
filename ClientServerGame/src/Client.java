@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -65,6 +66,14 @@ public class Client {
 						}else if(order.equals("load")) { // charge la partie
 							client.out.writeObject(order);
 							System.out.print("Quelle sauvegarde voulez-vous charger ?\n");
+							File[] lst_rep;
+							lst_rep = (File[]) client.in.readObject();
+							for(File rep : lst_rep){
+								if(rep.isFile())
+								{ 
+									System.out.println(rep.getName()); 
+								} 
+							}
 							String filename = sc.nextLine();
 							client.out.writeObject(filename);
 						}else if(order.equals("message")) { // envoi un message au serveur

@@ -1,0 +1,3 @@
+Les fonctions supplémentaires sont :
+	- Sauvegarde/Chargement de la partie (Attention, pas besoin de mettre l'extension pour charger la partie)
+	- Message avec l'autre joueur (Mais quand même en tour par tour)
